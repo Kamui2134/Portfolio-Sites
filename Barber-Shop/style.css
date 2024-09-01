@@ -1,0 +1,140 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+    --bg-black: black;
+
+    --text-white: #fff;
+    --text-yellow: ;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+img,
+time,
+span,
+input,
+button,
+text-area,
+ion-icon {
+	display: block;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+input,
+button,
+textarea {
+	background: none;
+	border: none;
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+ion-icon {
+	pointer-events: none;
+}
+
+address {
+	font-style: normal;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--bg-dark-purple);
+	background-image: url('../images/body-bg.jpg');
+	background-repeat: repeat;
+	color: var(--text-gainsboro);
+	font-family: var(--fontFamily-oxanium);
+	font-size: var(--fontSize-4);
+	font-weight: var(--weight-regular);
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+.header {
+    width: 100%;
+    background: var(--bg-black);
+    padding-inline: 50px;
+    padding-block-start: 32px;
+}
+
+.navbar-toggle-btn-container {
+
+}
+
+.circle { 
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: anim 10s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-text span {
+    position: relative;
+    left: 50%;
+    font-size: 1.2rem;
+    transform-origin: 0 100px;
+}
