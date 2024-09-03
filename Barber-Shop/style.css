@@ -1,4 +1,4 @@
-/*-----------------------------------*\
+/* section/*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
@@ -13,6 +13,9 @@
 
 	--fontSize-1: 0.75rem;
 	--fontSize-2: 1rem;
+	--fontSize-3: 1.25rem;
+	--fontSize-4: 1.5rem;
+	--fontSize-5: 4.375rem;
 
 	--weight-regular: 400;
 	--weight-medium: 500;
@@ -56,6 +59,10 @@ img {
 	height: auto;
 }
 
+main {
+	width: 100%;
+}
+
 input,
 button,
 textarea {
@@ -96,6 +103,25 @@ html {
 .icon {
 	height: 30px;
 	width: 30px;
+}
+
+.btn {
+	text-transform: uppercase;
+	background-color: var(--text-yellow);
+	width: 230px;
+	height: 80px;
+	font-family: var(--fontFamily-montserrat);
+	font-weight: var(--weight-semiBold);
+	font-size: var(--fontSize-3);
+	border-radius: 5px;
+}
+
+.description {
+	text-transform: uppercase;
+	font-family: var(--fontFamily-montserrat);
+	font-weight: var(--weight-medium);
+	font-size: var(--fontSize-4);
+	color: var(--text-yellow);
 }
 
 /*-----------------------------------*\
@@ -178,7 +204,7 @@ html {
 	display: flex;
 	align-items: stretch;
 	justify-items: flex-start;
-	gap: 60px;
+	gap: 61px;
 }
 
 .language-choice {
@@ -193,4 +219,74 @@ html {
 	font-family: var(--fontFamily-montserrat);
 	font-weight: var(--weight-semiBold);
 	color: var(--text-yellow);
+}
+
+/*-----------------------------------*\
+  #LANDING
+\*-----------------------------------*/
+
+.landing {
+	margin-block-start: 42px;
+	margin-inline-start: 200px;
+	width: 100%;
+}
+
+.landing .container {
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+
+.slogan-container {
+	margin-inline-end: 312px;
+}
+
+.go-to-us {
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: var(--text-yellow);
+	font-family: var(--fontFamily-delaGothicOne);
+	font-weight: var(--weight-regular);
+	font-size: var(--fontSize-5);
+	margin-block-start: 106px;
+}
+
+.go-to-us > span {
+	display: inline;
+	margin-left: 30px;
+	color: var(--text-white);
+	font-family: var(--fontFamily-delaGothicOne);
+	font-weight: var(--weight-regular);
+	font-size: var(--fontSize-5);
+	text-transform: uppercase;
+	-webkit-text-stroke-width: 0px;
+}
+
+.landing .description-container {
+	margin-inline-start: 30px;
+	margin-block: 47px 127px;
+}
+
+.razor {
+	position: absolute;
+	top: -84px;
+	left: 252px;
+}
+
+.client-and-sticker {
+	position: relative;
+	margin-block-start: 86px;
+	margin-inline-end: 303px;
+}
+
+.sticker {
+	position: absolute;
+	top: -86px;
+	right: -42px;
+}
+
+.landing .btn-container {
+	display: flex;
+	align-items: center;
 }
