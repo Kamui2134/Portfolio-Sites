@@ -11,7 +11,8 @@
 	--fontFamily-montserrat: 'Montserrat', sans-serif;
 	--fontFamily-delaGothicOne: 'Dela Gothic One', sans-serif;
 
-	--fontSize-4: calc(3 / 4) rem;
+	--fontSize-1: 0.75rem;
+	--fontSize-2: 1rem;
 
 	--weight-regular: 400;
 	--weight-medium: 500;
@@ -76,20 +77,16 @@ address {
 }
 
 html {
-	font-size: 10px;
+	font-size: 16px;
 	scroll-behavior: smooth;
+	line-height: 1;
 }
 
-body {
-	background: var(--bg-dark-purple);
-	background-image: url('../images/body-bg.jpg');
-	background-repeat: repeat;
-	color: var(--text-gainsboro);
-	font-family: var(--fontFamily-oxanium);
-	font-size: var(--fontSize-4);
-	font-weight: var(--weight-regular);
-	line-height: 1.6;
+body,
+html {
+	background: var(--bg-black);
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 /*-----------------------------------*\
@@ -110,9 +107,31 @@ body {
 	background: var(--bg-black);
 	padding-inline: 50px;
 	padding-block-start: 32px;
+	height: 146px;
+	overflow-y: hidden;
+}
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.social-list {
+	position: absolute;
+	right: calc(50% + 129px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 70px;
 }
 
 .navbar-toggle-btn-container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .circle {
@@ -122,6 +141,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .circle-text {
@@ -143,17 +165,28 @@ body {
 .circle-text span {
 	position: absolute;
 	left: 50%;
-	font-size: 12px;
+	font-size: var(--fontSize-1);
 	font-family: var(--fontFamily-montserrat);
 	font-weight: var(--weight-medium);
 	transform-origin: 0 57px;
 	color: var(--text-yellow);
 }
 
-.header .container {
+.languages-list {
+	position: absolute;
+	left: calc(50% + 129px);
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	align-items: stretch;
+	justify-items: flex-start;
+	gap: 60px;
+}
+
+.language-choice {
+	color: var(--text-white);
+	font-size: var(--fontSize-2);
+	font-family: var(--fontFamily-montserrat);
+	font-weight: var(--weight-medium);
+	text-transform: uppercase;
 }
 
 .contact-link {
