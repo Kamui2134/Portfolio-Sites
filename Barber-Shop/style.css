@@ -55,10 +55,6 @@ a {
 	text-decoration: none;
 }
 
-img {
-	height: auto;
-}
-
 main {
 	width: 100%;
 }
@@ -93,7 +89,16 @@ body,
 html {
 	background: var(--bg-black);
 	overflow-x: hidden;
-	overflow-y: hidden;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Скрываем scrollbar для IE, Edge и Firefox */
+body {
+	-ms-overflow-style: none; /* IE и Edge */
+	scrollbar-width: 0; /* Firefox */
 }
 
 /*-----------------------------------*\
@@ -139,6 +144,7 @@ html {
 }
 
 .header .container {
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -294,6 +300,16 @@ html {
 .landing .btn-container {
 	display: flex;
 	align-items: center;
+}
+
+.first-line {
+	position: absolute;
+	bottom: -267px;
+	left: -114px;
+	padding: 0;
+	border: none;
+	margin: 0;
+
 }
 
 /*-----------------------------------*\
